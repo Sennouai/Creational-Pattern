@@ -1,0 +1,51 @@
+# Factory Method Design Pattern
+
+## Description
+The Factory Method design pattern is a **Creational Design Pattern** that provides a way to create objects without specifying their exact class. It defines an interface for creating an object but allows subclasses to decide which class to instantiate. This promotes loose coupling and enhances flexibility in the code.
+
+---
+
+## Problem
+In software applications, there is often a need to create objects dynamically based on user input or runtime conditions. Directly instantiating objects in such scenarios can lead to tightly coupled code and difficulty in maintaining or extending the application. For example, a drawing application might need to create different shapes (e.g., `Circle`, `Rectangle`) dynamically while keeping the codebase scalable and modular.
+
+---
+
+## Solution
+The Factory Method design pattern solves this problem by delegating the responsibility of object creation to a factory class. The factory determines which object to create based on input parameters, abstracting the instantiation logic from the client code. This enhances scalability and adheres to the **Open/Closed Principle** (open for extension, closed for modification).
+
+---
+
+## Implementation Details
+
+### File Structure
+- **Shape.java**: Abstract base class defining the common interface for all shapes.
+- **Circle.java**: Concrete implementation of the `Shape` class for circles.
+- **Rectangle.java**: Concrete implementation of the `Shape` class for rectangles.
+- **ShapeFactory.java**: Factory class responsible for creating `Shape` objects based on input parameters.
+- **Main.java**: Demonstrates the Factory Method pattern by creating and drawing shapes using the factory.
+
+---
+
+## How to Compile and Run
+
+1. Ensure all files are in the same directory with filenames matching their class names:
+   - `Shape.java`
+   - `Circle.java`
+   - `Rectangle.java`
+   - `ShapeFactory.java`
+   - `Main.java`
+
+2. Open a terminal or command prompt and navigate to the directory containing the files.
+
+3. Compile all the Java files:
+   javac *.java
+
+4. Run the program:
+   java Main
+
+## Expected Output
+
+    Drawing a Circle
+    Drawing a Rectangle
+
+
